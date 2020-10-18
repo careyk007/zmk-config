@@ -70,66 +70,37 @@
    &kp SCLN   &kp CMMA   &kp DOT    &kp P         &kp Y          &kp F        &kp G        &kp C      &kp R      &kp L
    &hm LCTL A &hm LGUI O &hm LALT E &hm LSFT U    &kp I          &kp D        &hm LSFT H   &hm LALT T &hm LGUI N &hm LCTL S
    &kp QUOT   &kp Q      &kp J      &kp K         &kp X          &kp B        &kp M        &kp W      &kp V      &kp Z
-                         &none      &lt NAVI BKSP &lt NUMP TAB   &lt SYM2 RET &lt SYM1 SPC &none
+                         &none      &lt NAVI BKSP &lt NUMP TAB   &lt NUMP RET &lt NAVI SPC &none
                         >;
                 };
 
                 nav_layer {
 // -----------------------------------------------------------------------------------------
-// |     |     | ESC |  ~  |     |   | TAB | HOME |  UP  | END | DEL  |
-// |     |     |     |     |     |   |  /  | LEFT | DOWN | RGT | BKSP |
-// |     |     |     |     |     |   |  \  | ENT  |      |     |      |
+// |  %  |  *  |  {  |  }  |  !  |   | CLCK| HOME |  UP  | END | DEL  |
+// |  _  |  -  |  (  |  )  |  =  |   |  /  | LEFT | DOWN | RGT | BKSP |
+// |     |  &  |  [  |  ]  |  +  |   |  \  | ENT  | ESC  |     |      |
 //             |     |     |     |   |     |      |      |
                         bindings = <
-   &trans &trans &kp ESC &kp TILD &trans     &kp TAB  &kp HOME &kp UARW &kp END  &kp DEL
-   &trans &trans &trans  &trans   &trans     &kp FSLH &kp LARW &kp DARW &kp RARW &kp BKSP
-   &trans &trans &trans  &trans   &trans     &kp BSLH &kp RET  &trans   &trans    &trans
-                    &trans   &trans   &trans     &trans   &trans   &trans
+   &kp PRCT &kp ATSN  &kp LCUR &kp RCUR &kp BANG    &kp CLCK  &kp HOME &kp UARW &kp END  &kp DEL
+   &trans   &kp MINUS &kp LPRN &kp RPRN &kp EQL     &kp FSLH &kp LARW &kp DARW &kp RARW &kp BKSP
+   &trans   &kp AMPS  &kp LBKT &kp RBKT &trans      &kp BSLH &kp RET  &kp ESC  &trans    &trans
+                      &trans   &trans   &trans      &trans   &trans   &trans
                         >;
                 };
 
                 num_layer {
 // -----------------------------------------------------------------------------------------
-// |     |     |     |     |     |   |  A  |  7  |  8  |  9  |  D  |
-// |     |     |     |     |     |   |  B  |  4  |  5  |  6  |  E  |
-// |     |     |     |     |     |   |  C  |  1  |  2  |  3  |  F  |
+// |     |  ~  |  #  |  ^  |  ?  |   |  A  |  7  |  8  |  9  |  D  |
+// |  $  |  `  |  *  |  /  |  @  |   |  B  |  4  |  5  |  6  |  E  |
+// |     |     |     |  \  | "|" |   |  C  |  1  |  2  |  3  |  F  |
 //             |     |     |     |   |  0  |  .  |     |
                         bindings = <
-   &trans &trans &trans &trans &trans    &kp A     &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp D
-   &trans &trans &trans &trans &trans    &kp B     &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp E
-   &trans &trans &trans &trans &trans    &kp C     &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp F
-                 &trans &trans &trans    &kp NUM_0 &kp DOT   &trans
+   &trans   &kp TILD &kp HASH &kp CRRT &trans      &kp A     &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp D
+   &kp CURU &trans   &trans   &kp FSLH &kp ATSN    &kp B     &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp E
+   &trans   &trans   &trans   &kp BSLH &kp PIPE    &kp C     &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp F
+                     &trans   &trans   &trans      &kp NUM_0 &kp DOT   &trans
                         >;
                 };
         };
-
-                sym1_layer {
-// -----------------------------------------------------------------------------------------
-// |  %  |  *  |  {  |  }  |  !  |   |     |     |     |     |     |
-// |  _  |  -  |  (  |  )  |  =  |   |     |     |     |     |     |
-// |     |  &  |  [  |  ]  |  +  |   |     |     |     |     |     |
-//             |     |     |     |   |     |     |     |
-                        bindings = <
-   &kp PRCT  &kp ATSN  &kp LCUR &kp RCUR &kp BANG    &trans &trans &trans &trans &trans
-   &trans    &kp MINUS &kp LPRN &kp RPRN &kp EQL     &trans &trans &trans &trans &trans
-   &trans    &kp AMPS  &kp LBKT &kp RBKT &trans      &trans &trans &trans &trans &trns
-                       &trans   &trans   &trans      &trans &trans &trans
-                        >;
-                };
-
-                sym2_layer {
-// -----------------------------------------------------------------------------------------
-// |     |  ~  |  #  |  ^  |  ?  |   |     |     |     |     |     |
-// |  $  |  `  |  *  |  /  |  @  |   |     |     |     |     |     |
-// |     |     |     |  \  | "|" |   |     |     |     |     |     |
-//             |     |     |     |   |     |     |     |
-                        bindings = <
-   &trans   &kp TILD &kp HASH &kp CRRT &trans      &trans &trans &trans &trans &trans
-   &kp CURU &trans   &trans   &kp FSLH &kp ATSN    &trans &trans &trans &trans &trans
-   &trans   &trans   &trans   &kp BSLH &kp PIPE    &trans &trans &trans &trans &trns
-                     &trans   &trans   &trans      &trans &trans &trans
-                        >;
-                };
-
 };
 
