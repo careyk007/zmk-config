@@ -65,12 +65,12 @@
 // |  ;  |  ,  |  .  |  P  |  Y  |   |  F  |  G  |  C  |  R  |  L  |
 // |  A  |  O  |  E  |  U  |  I  |   |  D  |  H  |  T  |  N  |  S  |
 // |  '  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  |
-//             |     | TAB | ENT |   | SPC | BSPC|     |
+//             |     | TAB | ENT |   | BSPC| SPC |     |
                         bindings = <
-   &kp SEMI    &kp COMMA  &kp DOT    &kp P        &kp Y          &kp F          &kp G         &kp C      &kp R      &kp L
-   &hm LCTRL A &hm LGUI O &hm LALT E &hm LSHFT U  &kp I          &kp D          &hm LSHFT H   &hm LALT T &hm LGUI N &hm LCTRL S
-   &kp APOS    &kp Q      &kp J      &kp K        &kp X          &kp B          &kp M         &kp W      &kp V      &kp Z
-                          &none      &lt NAVI TAB &lt NUMP RET  &lt NUMP SPACE &lt NAVI BSPC &none
+   &kp SEMI    &kp COMMA  &kp DOT    &kp P        &kp Y          &kp F         &kp G          &kp C      &kp R      &kp L
+   &hm LCTRL A &hm LGUI O &hm LALT E &hm LSHFT U  &kp I          &kp D         &hm LSHFT H    &hm LALT T &hm LGUI N &hm LCTRL S
+   &kp APOS    &kp Q      &kp J      &kp K        &kp X          &kp B         &kp M          &kp W      &kp V      &kp Z
+                          &none      &lt NAVI TAB &lt NUMP RET  &lt NUMP BSPC  &lt NAVI SPACE &none
                         >;
                 };
 
@@ -81,7 +81,7 @@
 // |     |  &  |  [  |  ]  |  +  |   |  \  | ENT  | ESC  |     |      |
 //             |     |     |     |   |     |      |      |
                         bindings = <
-   &kp PRCNT &kp AT    &kp LBRC &kp RBRC &kp EXCL      &kp CAPS &kp HOME &kp UP   &kp END   &kp DEL
+   &kp PRCNT &kp STAR  &kp LBRC &kp RBRC &kp EXCL      &kp CAPS &kp HOME &kp UP   &kp END   &kp DEL
    &kp UNDER &kp MINUS &kp LPAR &kp RPAR &kp EQUAL     &kp FSLH &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
    &trans    &kp AMPS  &kp LBKT &kp RBKT &kp PLUS      &kp BSLH &kp RET  &kp ESC  &trans    &trans
                        &trans   &trans   &trans        &trans   &trans   &trans
