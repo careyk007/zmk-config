@@ -65,26 +65,26 @@
 // |  ;  |  ,  |  .  |  P  |  Y  |   |  F  |  G  |  C  |  R  |  L  |
 // |  A  |  O  |  E  |  U  |  I  |   |  D  |  H  |  T  |  N  |  S  |
 // |  '  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  |
-//             |     | BKSP| TAB |   | ENT | SPC |     |
+//             |     | TAB | ENT |   | SPC | BSPC|     |
                         bindings = <
-   &kp SCLN   &kp CMMA   &kp DOT    &kp P         &kp Y          &kp F        &kp G        &kp C      &kp R      &kp L
-   &hm LCTL A &hm LGUI O &hm LALT E &hm LSFT U    &kp I          &kp D        &hm LSFT H   &hm LALT T &hm LGUI N &hm LCTL S
-   &kp QUOT   &kp Q      &kp J      &kp K         &kp X          &kp B        &kp M        &kp W      &kp V      &kp Z
-                         &none      &lt NAVI BKSP &lt NUMP TAB   &lt NUMP RET &lt NAVI SPC &none
+   &kp SEMI    &kp COMMA  &kp DOT    &kp P        &kp Y          &kp F          &kp G         &kp C      &kp R      &kp L
+   &hm LCTRL A &hm LGUI O &hm LALT E &hm LSHFT U  &kp I          &kp D          &hm LSHFT H   &hm LALT T &hm LGUI N &hm LCTRL S
+   &kp APOS    &kp Q      &kp J      &kp K        &kp X          &kp B          &kp M         &kp W      &kp V      &kp Z
+                          &none      &lt NAVI TAB &lt NUMP RET  &lt NUMP SPACE &lt NAVI BSPC &none
                         >;
                 };
 
                 nav_layer {
 // -----------------------------------------------------------------------------------------
-// |  %  |  *  |  {  |  }  |  !  |   | CLCK| HOME |  UP  | END | DEL  |
+// |  %  |  *  |  {  |  }  |  !  |   | CAPS| HOME |  UP  | END | DEL  |
 // |  _  |  -  |  (  |  )  |  =  |   |  /  | LEFT | DOWN | RGT | BKSP |
 // |     |  &  |  [  |  ]  |  +  |   |  \  | ENT  | ESC  |     |      |
 //             |     |     |     |   |     |      |      |
                         bindings = <
-   &kp PRCT &kp ATSN  &kp LCUR &kp RCUR &kp BANG    &kp CLCK  &kp HOME &kp UARW &kp END  &kp DEL
-   &trans   &kp MINUS &kp LPRN &kp RPRN &kp EQL     &kp FSLH &kp LARW &kp DARW &kp RARW &kp BKSP
-   &trans   &kp AMPS  &kp LBKT &kp RBKT &trans      &kp BSLH &kp RET  &kp ESC  &trans    &trans
-                      &trans   &trans   &trans      &trans   &trans   &trans
+   &kp PRCNT &kp AT    &kp LBRC &kp RBRC &kp EXCL      &kp CAPS &kp HOME &kp UP   &kp END   &kp DEL
+   &kp UNDER &kp MINUS &kp LPAR &kp RPAR &kp EQUAL     &kp FSLH &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
+   &trans    &kp AMPS  &kp LBKT &kp RBKT &kp PLUS      &kp BSLH &kp RET  &kp ESC  &trans    &trans
+                       &trans   &trans   &trans        &trans   &trans   &trans
                         >;
                 };
 
@@ -95,10 +95,10 @@
 // |     |     |     |  \  | "|" |   |  C  |  1  |  2  |  3  |  F  |
 //             |     |     |     |   |  0  |  .  |     |
                         bindings = <
-   &trans   &kp TILD &kp HASH &kp CRRT &trans      &kp A     &kp NUM_7 &kp NUM_8 &kp NUM_9 &kp D
-   &kp CURU &trans   &trans   &kp FSLH &kp ATSN    &kp B     &kp NUM_4 &kp NUM_5 &kp NUM_6 &kp E
-   &trans   &trans   &trans   &kp BSLH &kp PIPE    &kp C     &kp NUM_1 &kp NUM_2 &kp NUM_3 &kp F
-                     &trans   &trans   &trans      &kp NUM_0 &kp DOT   &trans
+   &trans   &kp TILDE &kp HASH &kp CARET &kp QMARK   &kp A  &kp N7  &kp N8  &kp N9  &kp D
+   &kp DLLR &kp GRAVE &kp STAR &kp FSLH  &kp AT      &kp B  &kp N4  &kp N5  &kp N6  &kp E
+   &trans   &trans    &trans   &kp BSLH  &kp PIPE    &kp C  &kp N1  &kp N2  &kp N3  &kp F
+                      &trans   &trans    &trans      &kp N0 &kp DOT &trans
                         >;
                 };
         };
