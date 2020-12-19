@@ -24,7 +24,7 @@
 /* Symbols:  */
 /* Function and Systems: */
 
-&mt {
+&lt {
         flavor = "hold-preferred";
 };
 
