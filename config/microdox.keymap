@@ -7,6 +7,7 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
 #include <dt-bindings/zmk/bt.h>
+#include <dt-bindings/zmk/rgb.h>
 
 #define BASE     0 /* (HANDS DOWN LAYER) */
 #define NAVI     1 /* (NAVIGATION LAYER) */
@@ -23,13 +24,9 @@
 /* Symbols:  */
 /* Function and Systems: */
 
-/* Missing symbols:
-        underscore
-        plus
-        backtick
-        asterisk
-        question mark
- */
+&mt {
+        flavor = "hold-preferred";
+};
 
 / {
         behaviors {
@@ -37,28 +34,14 @@
                 compatible = "zmk,behavior-hold-tap";
                 label = "HOMEROW_MODS";
                 #binding-cells = <2>;
-                tapping_term_ms = <175>;
-                flavor = "balanced";
+                tapping_term_ms = <200>;
+                flavor = "tap-preferred";
                 bindings = <&kp>, <&kp>;
                 };
         };
 
         keymap {
                 compatible = "zmk,keymap";
-
-                //base_layer {
-// -----------------------------------------------------------------------------------------
-// |  Q  |  W  |  E  |  R  |  T  |   |  Y  |  U   |  I  |  O  |  P  |
-// |  A  |  S  |  D  |  F  |  G  |   |  H  |  J   |  K  |  L  |  ;  |
-// |  Z  |  X  |  C  |  V  |  B  |   |  N  |  M   |  ,  |  .  |  /  |
-//             | GUI | NAV | SPC |   | ENT | SYM  | ALT |
-                        //bindings = <
-   //&kp Q &kp W &kp E    &kp R   &kp T     &kp Y   &kp U   &kp I    &kp O   &kp P
-   //&kp A &kp S &kp D    &kp F   &kp G     &kp H   &kp J   &kp K    &kp L   &kp SCLN
-   //&kp Z &kp X &kp C    &kp V   &kp B     &kp N   &kp M   &kp CMMA &kp DOT &kp FSLH
-               //&kp LGUI &mo NAV &kp SPC   &kp RET &mo SYM &kp RALT
-                        //>;
-                //};
 
                 dvorak_layer {
 // -----------------------------------------------------------------------------------------
@@ -70,37 +53,50 @@
    &kp SEMI    &kp COMMA  &kp DOT    &kp P        &kp Y          &kp F         &kp G          &kp C      &kp R      &kp L
    &hm LCTRL A &hm LGUI O &hm LALT E &hm LSHFT U  &kp I          &kp D         &hm LSHFT H    &hm LALT T &hm LGUI N &hm LCTRL S
    &kp APOS    &kp Q      &kp J      &kp K        &kp X          &kp B         &kp M          &kp W      &kp V      &kp Z
-                          &none      &lt NAVI TAB &lt NUMP RET  &lt NUMP BSPC  &lt NAVI SPACE &none
+                          &none      &lt NAVI TAB &lt NUMP RET  &lt NAVI SPACE &lt NUMP BSPC  &none
                         >;
                 };
 
+//                hands_down_layer {
+//// -----------------------------------------------------------------------------------------
+//// |  ;  |  J  |  Y  |  F  | BSPC|   |  B  |  G  |  H  |  C  |  Q  |
+//// |  A  |  I  |  O  |  U  |  W  |   |  P  |  T  |  N  |  R  |  S  |
+//// |  '  |  .  |  ,  |  K  |  V  |   |  Z  |  D  |  L  |  M  |  X  |
+////             |     | TAB | ENT |   | SPC |  E  |     |
+//                        bindings = <
+//   &kp SEMI    &kp J      &kp Y      &kp F        &kp BSPC      &kp B          &kp G       &kp H      &kp C      &kp Q
+//   &hm LCTRL A &hm LGUI I &hm LALT O &hm LSHFT U  &kp W         &kp P          &hm LSHFT T &hm LALT N &hm LGUI R &hm LCTRL S
+//   &kp APOS    &kp DOT    &kp COMMA  &kp K        &kp V         &kp Z          &kp D       &kp L      &kp M      &kp X
+//                          &none      &lt NAVI TAB &lt NUMP RET  &lt NUMP SPACE &lt NAVI E  &none
+//                        >;
+//                };
+
                 nav_layer {
 // -----------------------------------------------------------------------------------------
-// |  %  |  *  |  {  |  }  |  !  |   | CAPS| HOME |  UP  | END | DEL  |
-// |  _  |  -  |  (  |  )  |  =  |   |  /  | LEFT | DOWN | RGT | BKSP |
-// |     |  &  |  [  |  ]  |  +  |   |  \  | ENT  | ESC  |     |      |
+// |  %  |  *  |  {  |  }  |  !  |   | CAPS| HOME |  UP  | END  | DEL  |
+// |  _  |  -  |  (  |  )  |  =  |   |  /  | LEFT | DOWN | RGT  | BKSP |
+// |     |  &  |  [  |  ]  |  +  |   |  \  | ESC  | BT_1 | BT_2 | BCLR |
 //             |     |     |     |   |     |      |      |
                         bindings = <
-   &kp PRCNT &kp STAR  &kp LBRC &kp RBRC &kp EXCL      &kp CAPS &kp HOME &kp UP   &kp END   &kp DEL
-   &kp UNDER &kp MINUS &kp LPAR &kp RPAR &kp EQUAL     &kp FSLH &kp LEFT &kp DOWN &kp RIGHT &kp BSPC
-   &trans    &kp AMPS  &kp LBKT &kp RBKT &kp PLUS      &kp BSLH &kp RET  &kp ESC  &trans    &trans
+   &kp PRCNT &kp STAR  &kp LBRC &kp RBRC &kp EXCL      &kp CAPS &kp HOME &kp UP       &kp END      &kp DEL
+   &kp UNDER &kp MINUS &kp LPAR &kp RPAR &kp EQUAL     &kp FSLH &kp LEFT &kp DOWN     &kp RIGHT    &kp BSPC
+   &trans    &kp AMPS  &kp LBKT &kp RBKT &kp PLUS      &kp BSLH &kp ESC  &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_CLR
                        &trans   &trans   &trans        &trans   &trans   &trans
                         >;
                 };
 
                 num_layer {
 // -----------------------------------------------------------------------------------------
-// |     |  ~  |  #  |  ^  |  ?  |   |  A  |  7  |  8  |  9  |  D  |
+// |     |  ~  |  #  |  ^  |  ?  |   |  C  |  7  |  8  |  9  |  F  |
 // |  $  |  `  |  *  |  /  |  @  |   |  B  |  4  |  5  |  6  |  E  |
-// |     |     |     |  \  | "|" |   |  C  |  1  |  2  |  3  |  F  |
+// |     |     |     |  \  | "|" |   |  A  |  1  |  2  |  3  |  D  |
 //             |     |     |     |   |  0  |  .  |     |
                         bindings = <
-   &trans   &kp TILDE &kp HASH &kp CARET &kp QMARK   &kp A  &kp N7  &kp N8  &kp N9  &kp D
+   &trans   &kp TILDE &kp HASH &kp CARET &kp QMARK   &kp C  &kp N7  &kp N8  &kp N9  &kp F
    &kp DLLR &kp GRAVE &kp STAR &kp FSLH  &kp AT      &kp B  &kp N4  &kp N5  &kp N6  &kp E
-   &trans   &trans    &trans   &kp BSLH  &kp PIPE    &kp C  &kp N1  &kp N2  &kp N3  &kp F
+   &trans   &trans    &rgb_ug RGB_TOG   &kp BSLH  &kp PIPE    &kp A  &kp N1  &kp N2  &kp N3  &kp D
                       &trans   &trans    &trans      &kp N0 &kp DOT &trans
                         >;
                 };
         };
 };
-
