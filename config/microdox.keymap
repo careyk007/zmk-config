@@ -93,10 +93,10 @@
 // |     |     |     |  \  | "|" |   |  A  |  1  |  2  |  3  |  D  |
 //             |     |     |     |   |  0  |  .  |     |
                         bindings = <
-   &to GAME &kp TILDE &kp HASH &kp CARET &kp QMARK   &kp C  &kp N7  &kp N8  &kp N9  &kp F
-   &kp DLLR &kp GRAVE &kp STAR &kp FSLH  &kp AT      &kp B  &kp N4  &kp N5  &kp N6  &kp E
-   &trans   &trans    &rgb_ug RGB_TOG   &kp BSLH  &kp PIPE    &kp A  &kp N1  &kp N2  &kp N3  &kp D
-                      &trans   &trans    &trans      &kp N0 &kp DOT &trans
+   &tog GAME &kp TILDE &kp HASH &kp CARET &kp QMARK   &kp C  &kp N7  &kp N8  &kp N9  &kp F
+   &kp DLLR  &kp GRAVE &kp STAR &kp FSLH  &kp AT      &kp B  &kp N4  &kp N5  &kp N6  &kp E
+   &trans    &trans    &rgb_ug RGB_TOG   &kp BSLH  &kp PIPE    &kp A  &kp N1  &kp N2  &kp N3  &kp D
+                       &trans   &trans    &trans      &kp N0 &kp DOT &trans
                         >;
                 };
         };
