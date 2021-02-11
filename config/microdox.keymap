@@ -10,10 +10,11 @@
 #include <dt-bindings/zmk/rgb.h>
 
 #define BASE     0 /* (HANDS DOWN LAYER) */
-#define NAVI     1 /* (NAVIGATION LAYER) */
-#define NUMP     2 /* (NUMPAD LAYER) */
-#define SYM1     3 /* (SYMBOL LAYER 1) */
-#define SYM2     4 /* (SYMBOL LAYER 2) */
+#define GAME     1 /* (GAME LAYER) */
+#define NAVI     2 /* (NAVIGATION LAYER) */
+#define NUMP     3 /* (NUMPAD LAYER) */
+#define SYM1     4 /* (SYMBOL LAYER 1) */
+#define SYM2     5 /* (SYMBOL LAYER 2) */
 
 /* There are 7 layers, including the base layer */
 /* Base: Hands Down */
@@ -57,19 +58,19 @@
                         >;
                 };
 
-//                hands_down_layer {
-//// -----------------------------------------------------------------------------------------
-//// |  ;  |  J  |  Y  |  F  | BSPC|   |  B  |  G  |  H  |  C  |  Q  |
-//// |  A  |  I  |  O  |  U  |  W  |   |  P  |  T  |  N  |  R  |  S  |
-//// |  '  |  .  |  ,  |  K  |  V  |   |  Z  |  D  |  L  |  M  |  X  |
-////             |     | TAB | ENT |   | SPC |  E  |     |
-//                        bindings = <
-//   &kp SEMI    &kp J      &kp Y      &kp F        &kp BSPC      &kp B          &kp G       &kp H      &kp C      &kp Q
-//   &hm LCTRL A &hm LGUI I &hm LALT O &hm LSHFT U  &kp W         &kp P          &hm LSHFT T &hm LALT N &hm LGUI R &hm LCTRL S
-//   &kp APOS    &kp DOT    &kp COMMA  &kp K        &kp V         &kp Z          &kp D       &kp L      &kp M      &kp X
-//                          &none      &lt NAVI TAB &lt NUMP RET  &lt NUMP SPACE &lt NAVI E  &none
-//                        >;
-//                };
+                gaming_layer {
+// -----------------------------------------------------------------------------------------
+// | TAB |  Q  |  W  |  E  |  R  |   |  B  |  G  |  H  |  C  |  Q  |
+// | SHFT|  A  |  S  |  D  |  F  |   |  P  |  T  |  N  |  R  |  S  |
+// | CTRL|  Z  |  X  |  C  |  V  |   |  Z  |  D  |  L  |  M  |  X  |
+//             |     |  I | SPC |   | SPC |  E  |     |
+                        bindings = <
+   &kp TAB    &kp Q  &kp W  &kp E  &kp R      &kp B         &kp G          &kp H       &kp C      &kp Q
+   &kp LSFT   &kp A  &kp S  &hm D  &kp F      &kp P         &hm LSHFT T    &hm LALT N  &hm LGUI R &hm LCTRL S
+   &kp LCTRL  &kp Z  &kp X  &kp C  &kp V      &kp Z         &kp D          &kp L       &kp M      &kp X
+                            &kp I  &kp SPACE  &lt NUMP RET  &lt NUMP SPACE &lt NAVI E  &none
+                        >;
+                };
 
                 nav_layer {
 // -----------------------------------------------------------------------------------------
@@ -87,12 +88,12 @@
 
                 num_layer {
 // -----------------------------------------------------------------------------------------
-// |     |  ~  |  #  |  ^  |  ?  |   |  C  |  7  |  8  |  9  |  F  |
+// | GME |  ~  |  #  |  ^  |  ?  |   |  C  |  7  |  8  |  9  |  F  |
 // |  $  |  `  |  *  |  /  |  @  |   |  B  |  4  |  5  |  6  |  E  |
 // |     |     |     |  \  | "|" |   |  A  |  1  |  2  |  3  |  D  |
 //             |     |     |     |   |  0  |  .  |     |
                         bindings = <
-   &trans   &kp TILDE &kp HASH &kp CARET &kp QMARK   &kp C  &kp N7  &kp N8  &kp N9  &kp F
+   &to GAME &kp TILDE &kp HASH &kp CARET &kp QMARK   &kp C  &kp N7  &kp N8  &kp N9  &kp F
    &kp DLLR &kp GRAVE &kp STAR &kp FSLH  &kp AT      &kp B  &kp N4  &kp N5  &kp N6  &kp E
    &trans   &trans    &rgb_ug RGB_TOG   &kp BSLH  &kp PIPE    &kp A  &kp N1  &kp N2  &kp N3  &kp D
                       &trans   &trans    &trans      &kp N0 &kp DOT &trans
