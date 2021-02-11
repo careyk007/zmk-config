@@ -63,12 +63,12 @@
 // | TAB |  Q  |  W  |  E  |  R  |   |  B  |  G  |  H  |  C  |  Q  |
 // | SHFT|  A  |  S  |  D  |  F  |   |  P  |  T  |  N  |  R  |  S  |
 // | CTRL|  Z  |  X  |  C  |  V  |   |  Z  |  D  |  L  |  M  |  X  |
-//             |     |  I | SPC |   | SPC |  E  |     |
+//             |     |  I  | SPC |   | RET |  E  |     |
                         bindings = <
-   &kp TAB    &kp Q  &kp W  &kp E  &kp R      &kp B         &kp G          &kp H       &kp C      &kp Q
-   &kp LSFT   &kp A  &kp S  &hm D  &kp F      &kp P         &hm LSHFT T    &hm LALT N  &hm LGUI R &hm LCTRL S
-   &kp LCTRL  &kp Z  &kp X  &kp C  &kp V      &kp Z         &kp D          &kp L       &kp M      &kp X
-                            &kp I  &kp SPACE  &lt NUMP RET  &lt NUMP SPACE &lt NAVI E  &none
+   &kp TAB    &kp Q  &kp W  &kp E  &kp R      &kp B         &kp G       &kp H      &kp C      &kp Q
+   &kp LSFT   &kp A  &kp S  &hm D  &kp F      &kp P         &hm LSHFT T &hm LALT N &hm LGUI R &hm LCTRL S
+   &kp LCTRL  &kp Z  &kp X  &kp C  &kp V      &kp Z         &kp D       &kp L      &kp M      &kp X
+                     &none  &kp I  &kp SPACE  &lt NUMP RET  &lt NAVI E  &none
                         >;
                 };
 
