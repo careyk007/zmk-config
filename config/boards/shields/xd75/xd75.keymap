@@ -11,10 +11,11 @@
 
 #define BASE     0 /* (HANDS DOWN LAYER) */
 #define GAME     1 /* (GAME LAYER) */
-#define NAVI     2 /* (NAVIGATION LAYER) */
-#define NUMP     3 /* (NUMPAD LAYER) */
-#define SYM1     4 /* (SYMBOL LAYER 1) */
-#define SYM2     5 /* (SYMBOL LAYER 2) */
+#define ALTG     2 /* (ALTERNATIVE GAME LAYER) */
+#define NAVI     3 /* (NAVIGATION LAYER) */
+#define NUMP     4 /* (NUMPAD LAYER) */
+#define SYM1     5 /* (SYMBOL LAYER 1) */
+#define SYM2     6 /* (SYMBOL LAYER 2) */
 
 / {
 	behaviors {
@@ -53,10 +54,26 @@
 // | CTRL|  Z  |  X  |  C  |  V  |   |  Z  |  D  |  L  |  M  |  X  |
 //             |     |  I  | SPC |   | RET |  E  |     |
                         bindings = <
-   &kp TAB    &kp Q  &kp W  &kp E  &kp R      &kp B         &kp G       &kp H      &kp C      &kp Q
-   &kp LSFT   &kp A  &kp S  &kp D  &kp F      &kp P         &hm LSHFT T &hm LALT N &hm LGUI R &hm LCTRL S
-   &kp LCTRL  &kp Z  &kp X  &kp C  &kp V      &kp Z         &kp D       &kp L      &kp M      &kp X
-                     &none  &kp I  &kp SPACE  &lt NUMP RET  &lt NAVI E  &none
+        &trans &kp ESC   &kp N3 &kp N2 &kp N1 &kp N4     &trans &trans &trans &trans        &trans      &trans     &trans     &trans      &trans 
+        &trans &kp TAB   &kp Q  &kp W  &kp E  &kp R      &trans &trans &trans &kp B         &kp G       &kp H      &kp C      &kp Q       &trans 
+        &trans &kp LSFT  &kp A  &kp S  &kp D  &kp F      &trans &trans &trans &kp P         &hm LSHFT T &hm LALT N &hm LGUI R &hm LCTRL S &trans 
+        &trans &kp LCTRL &kp Z  &kp X  &kp C  &kp V      &trans &trans &trans &kp Z         &kp D       &kp L      &kp M      &kp X       &trans 
+        &trans &trans    &trans &trans &kp I  &kp SPACE  &trans &trans &trans &lt NUMP RET  &lt NAVI E  &none      &trans     &trans      &trans
+                        >;
+                };
+
+                alt_game_layer {
+// -----------------------------------------------------------------------------------------
+// | TAB |  Q  |  W  |  E  |  R  |   |  B  |  G  |  H  |  C  |  Q  |
+// | SHFT|  A  |  S  |  D  |  F  |   |  P  |  T  |  N  |  R  |  S  |
+// | CTRL|  Z  |  X  |  C  |  V  |   |  Z  |  D  |  L  |  M  |  X  |
+//             |     |  I  | SPC |   | RET |  E  |     |
+                        bindings = <
+        &trans       &trans      &trans     &trans     &trans      &trans  &trans &kp ESC   &kp N3 &kp N2 &kp N1 &kp N4    &trans &trans &trans
+        &kp B        &kp G       &kp H      &kp C      &kp Q       &trans  &trans &kp TAB   &kp Q  &kp W  &kp E  &kp R     &trans &trans &trans
+        &kp P        &hm LSHFT T &hm LALT N &hm LGUI R &hm LCTRL S &trans  &trans &kp LSFT  &kp A  &kp S  &kp D  &kp F     &trans &trans &trans
+        &kp Z        &kp D       &kp L      &kp M      &kp X       &trans  &trans &kp LCTRL &kp Z  &kp X  &kp C  &kp V     &trans &trans &trans
+        &lt NUMP RET &lt NAVI E  &none      &trans     &trans      &trans  &trans &trans    &trans &trans &kp I  &kp SPACE &trans &trans &trans 
                         >;
                 };
 
@@ -82,11 +99,11 @@
 // |     |     |     |  \  | "|" |   |  A  |  1  |  2  |  3  |  D  |
 //             |     |     |     |   |  0  |  .  |     |
                         bindings = <
-   &trans &trans   &trans    &trans            &trans    &trans      &trans &trans &trans &trans  &trans  &trans  &trans  &trans &trans
-   &trans &trans   &kp TILDE &kp HASH          &kp CARET &kp QMARK   &trans &trans &trans &kp C   &kp N7  &kp N8  &kp N9  &kp F  &trans
-   &trans &kp DLLR &kp GRAVE &kp STAR          &kp FSLH  &kp AT      &trans &trans &trans &kp B   &kp N4  &kp N5  &kp N6  &kp E  &trans
-   &trans &trans   &trans    &rgb_ug RGB_TOG   &kp BSLH  &kp PIPE    &trans &trans &trans &kp A   &kp N1  &kp N2  &kp N3  &kp D  &trans
-   &trans &trans   &trans    &trans            &trans    &trans      &trans &trans &trans &kp N0  &kp DOT &trans  &trans  &trans &trans
+   &trans &tog ALTG &trans    &trans            &trans    &trans      &trans &trans &trans &trans  &trans  &trans  &trans  &trans &trans
+   &trans &tog GAME &kp TILDE &kp HASH          &kp CARET &kp QMARK   &trans &trans &trans &kp C   &kp N7  &kp N8  &kp N9  &kp F  &trans
+   &trans &kp DLLR  &kp GRAVE &kp STAR          &kp FSLH  &kp AT      &trans &trans &trans &kp B   &kp N4  &kp N5  &kp N6  &kp E  &trans
+   &trans &trans    &trans    &rgb_ug RGB_TOG   &kp BSLH  &kp PIPE    &trans &trans &trans &kp A   &kp N1  &kp N2  &kp N3  &kp D  &trans
+   &trans &trans    &trans    &trans            &trans    &trans      &trans &trans &trans &kp N0  &kp DOT &trans  &trans  &trans &trans
                         >;
                 };
 
