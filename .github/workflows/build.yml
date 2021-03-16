@@ -80,33 +80,33 @@ jobs:
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
         id: west-build-skeletyl-left
         with:
-          args: 'build "-s zmk/app -b nice_nano -- -DSHIELD=skeletyl_left -DZMK_CONFIG=/github/workspace/config"'
+          args: 'build "-s zmk/app -b nrfmicro_13 -- -DSHIELD=skeletyl_left -DZMK_CONFIG=/github/workspace/config"'
       - name: Skeletyl DTS File
         if: ${{ always() }}
-        run: cat -n build/zephyr/nice_nano.dts.pre.tmp
+        run: cat -n build/zephyr/nrfmicro_13.dts.pre.tmp
       - name: Skeletyl Left Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 skeletyl_left_nice_nano.uf2
+        run: cp build/zephyr/zmk.uf2 skeletyl_left_nrfmicro_13.uf2
       - name: Archive (Skeletyl Left)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: skeletyl_left_nice_nano.uf2
+          path: skeletyl_left_nrfmicro_13.uf2
       - name: West Build (Skeletyl Right)
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
         id: west-build-skeletyl-right
         with:
-          args: 'build "--pristine -s zmk/app -b nice_nano -- -DSHIELD=skeletyl_right -DZMK_CONFIG=/github/workspace/config"'
+          args: 'build "--pristine -s zmk/app -b nrfmicro_13 -- -DSHIELD=skeletyl_right -DZMK_CONFIG=/github/workspace/config"'
       - name: Skeletyl Right Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
-        run: cp build/zephyr/zmk.uf2 skeletyl_right_nice_nano.uf2
+        run: cp build/zephyr/zmk.uf2 skeletyl_right_nrfmicro_13.uf2
       - name: Archive (Skeletyl Right)
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: skeletyl_right_nice_nano.uf2
+          path: skeletyl_right_nrfmicro_13.uf2
       - name: West Build (xd75)
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
         id: west-build-xd75
