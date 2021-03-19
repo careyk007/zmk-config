@@ -51,10 +51,10 @@
 // |  '  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  |
 //             |     | TAB | ENT |   | BSPC| SPC |     |
                         bindings = <
-   &kp SEMI    &kp COMMA  &kp DOT    &kp P        &kp Y          &kp F         &kp G          &kp C      &kp R      &kp L
-   &hm LCTRL A &hm LGUI O &hm LALT E &hm LSHFT U  &kp I          &kp D         &hm LSHFT H    &hm LALT T &hm LGUI N &hm LCTRL S
-   &kp APOS    &kp Q      &kp J      &kp K        &kp X          &kp B         &kp M          &kp W      &kp V      &kp Z
-                          &none      &lt NAVI TAB &lt NUMP RET  &lt NAVI SPACE &lt NUMP BSPC  &none
+   &kp SEMI    &kp COMMA  &kp DOT      &kp P        &kp Y          &kp F &kp G          &kp C         &kp R      &kp L
+   &hm LCTRL A &hm LGUI O &hm LALT E   &hm LSHFT U  &kp I          &kp D &hm LSHFT H    &hm LALT T    &hm LGUI N &hm LCTRL S
+   &kp APOS    &kp Q      &kp J        &kp K        &kp X          &kp B &kp M          &kp W         &kp V      &kp Z
+                          &lt NAVI TAB &lt NUMP RET &none          &none &lt NAVI SPACE &lt NUMP BSPC
                         >;
                 };
 
@@ -65,10 +65,10 @@
 // | CTRL|  Z  |  X  |  C  |  V  |   |  Z  |  D  |  L  |  M  |  X  |
 //             |     |  I  | SPC |   | RET |  E  |     |
                         bindings = <
-   &kp TAB    &kp Q  &kp W  &kp E  &kp R      &kp B         &kp G       &kp H      &kp C      &kp Q
-   &kp LSFT   &kp A  &kp S  &kp D  &kp F      &kp P         &hm LSHFT T &hm LALT N &hm LGUI R &hm LCTRL S
-   &kp LCTRL  &kp Z  &kp X  &kp C  &kp V      &kp Z         &kp D       &kp L      &kp M      &kp X
-                     &none  &kp I  &kp SPACE  &lt NUMP RET  &lt NAVI E  &none
+   &kp TAB    &kp Q  &kp W  &kp E     &kp R      &kp B &kp G         &kp H      &kp C      &kp Q
+   &kp LSFT   &kp A  &kp S  &kp D     &kp F      &kp P &hm LSHFT T   &hm LALT N &hm LGUI R &hm LCTRL S
+   &kp LCTRL  &kp Z  &kp X  &kp C     &kp V      &kp Z &kp D         &kp L      &kp M      &kp X
+                     &kp I  &kp SPACE &none      &none &lt NUMP RET  &lt NAVI E
                         >;
                 };
 
@@ -93,10 +93,10 @@
 // |     |     |     |  \  | "|" |   |  A  |  1  |  2  |  3  |  D  |
 //             |     |     |     |   |  0  |  .  |     |
                         bindings = <
-   &tog GAME &kp TILDE &kp HASH &kp CARET &kp QMARK   &kp C  &kp N7  &kp N8  &kp N9  &kp F
-   &kp DLLR  &kp GRAVE &kp STAR &kp FSLH  &kp AT      &kp B  &kp N4  &kp N5  &kp N6  &kp E
-   &trans    &trans    &rgb_ug RGB_TOG   &kp BSLH  &kp PIPE    &kp A  &kp N1  &kp N2  &kp N3  &kp D
-                       &trans   &trans    &trans      &kp N0 &kp DOT &trans
+   &tog GAME &kp TILDE &kp HASH           &kp CARET &kp QMARK   &kp C  &kp N7  &kp N8  &kp N9  &kp F
+   &kp DLLR  &kp GRAVE &kp STAR           &kp FSLH  &kp AT      &kp B  &kp N4  &kp N5  &kp N6  &kp E
+   &trans    &trans    &rgb_ug RGB_TOG    &kp BSLH  &kp PIPE    &kp A  &kp N1  &kp N2  &kp N3  &kp D
+                       &trans             &trans    &trans      &trans &kp N0  &kp DOT
                         >;
                 };
         };
