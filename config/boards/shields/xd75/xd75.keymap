@@ -34,15 +34,15 @@
 
                 dvorak_layer {
 // -----------------------------------------------------------------------------------------
-// |  ;  |  ,  |  .  |  P  |  Y  |   |  F  |  G  |  C  |  R  |  L  |
-// |  A  |  O  |  E  |  U  |  I  |   |  D  |  H  |  T  |  N  |  S  |
-// |  '  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  |
-//             |     | TAB | ENT |   | BSPC| SPC |     |
+// |  Q  |  H  |  O  |  U  |  X  |   |  G  |  C  |  R  |  F  |  Z  |
+// |  Y  |  I  |  E  |  A  |  ;  |   |  D  |  S  |  T  |  N  |  B  |
+// |  '  |  J  |  ,  |  K  |  .  |   |  W  |  M  |  L  |  P  |  V  |
+//             | TAB | ENT |     |   |     | BSPC| SPC |
                         bindings = <
         &none &none       &none      &none      &none        &none         &none  &none  &none &none          &none          &none      &none      &none       &none
-        &none &kp SEMI    &kp COMMA  &kp DOT    &kp P        &kp Y         &none  &none  &none &kp F          &kp G          &kp C      &kp R      &kp L       &none
-        &none &hm LCTRL A &hm LGUI O &hm LALT E &hm LSHFT U  &kp I         &none  &none  &none &kp D          &hm LSHFT H    &hm LALT T &hm LGUI N &hm LCTRL S &none
-        &none &kp APOS    &kp Q      &kp J      &kp K        &kp X         &none  &none  &none &kp B          &kp M          &kp W      &kp V      &kp Z       &none
+        &none &kp Q       &kp H      &kp O      &kp U        &kp X         &none  &none  &none &kp G          &kp C          &kp R      &kp F      &kp Z       &none
+        &none &hm LCTRL Y &hm LGUI I &hm LALT E &hm LSHFT A  &kp SEMI      &none  &none  &none &kp D          &hm LSHFT S    &hm LALT T &hm LGUI N &hm LCTRL B &none
+        &none &kp APOS    &kp COMMA  &kp J      &kp K        &kp DOT       &none  &none  &none &kp W          &kp M          &kp L      &kp P      &kp V       &none
         &none &none       &none      &none      &lt NAVI TAB &lt NUMP RET  &none  &none  &none &lt NAVI SPACE &lt NUMP BSPC  &none      &none      &none       &none
                         >;
                 };
@@ -96,14 +96,14 @@
 // -----------------------------------------------------------------------------------------
 // | GME |  ~  |  #  |  ^  |  ?  |   |  C  |  7  |  8  |  9  |  F  |
 // |  $  |  `  |  *  |  /  |  @  |   |  B  |  4  |  5  |  6  |  E  |
-// |     |     |     |  \  | "|" |   |  A  |  1  |  2  |  3  |  D  |
+// | BOOT|     |     |  \  | "|" |   |  A  |  1  |  2  |  3  |  D  |
 //             |     |     |     |   |  0  |  .  |     |
                         bindings = <
-   &trans &tog ALTG &trans    &trans            &trans    &trans      &trans &trans &trans &trans  &trans  &trans  &trans  &trans &trans
-   &trans &tog GAME &kp TILDE &kp HASH          &kp CARET &kp QMARK   &trans &trans &trans &kp C   &kp N7  &kp N8  &kp N9  &kp F  &trans
-   &trans &kp DLLR  &kp GRAVE &kp STAR          &kp FSLH  &kp AT      &trans &trans &trans &kp B   &kp N4  &kp N5  &kp N6  &kp E  &trans
-   &trans &trans    &trans    &rgb_ug RGB_TOG   &kp BSLH  &kp PIPE    &trans &trans &trans &kp A   &kp N1  &kp N2  &kp N3  &kp D  &trans
-   &trans &trans    &trans    &trans            &trans    &trans      &trans &trans &trans &kp N0  &kp DOT &trans  &trans  &trans &trans
+   &trans &tog ALTG   &trans    &trans            &trans    &trans      &trans &trans &trans &trans  &trans  &trans  &trans  &trans &trans
+   &trans &tog GAME   &kp TILDE &kp HASH          &kp CARET &kp QMARK   &trans &trans &trans &kp C   &kp N7  &kp N8  &kp N9  &kp F  &trans
+   &trans &kp DLLR    &kp GRAVE &kp STAR          &kp FSLH  &kp AT      &trans &trans &trans &kp B   &kp N4  &kp N5  &kp N6  &kp E  &trans
+   &trans &bootloader &trans    &rgb_ug RGB_TOG   &kp BSLH  &kp PIPE    &trans &trans &trans &kp A   &kp N1  &kp N2  &kp N3  &kp D  &trans
+   &trans &trans      &trans    &trans            &trans    &trans      &trans &trans &trans &kp N0  &kp DOT &trans  &trans  &trans &trans
                         >;
                 };
 
