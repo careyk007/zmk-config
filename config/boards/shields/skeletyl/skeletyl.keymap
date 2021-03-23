@@ -62,12 +62,12 @@
 // -----------------------------------------------------------------------------------------
 // |  Q  |  H  |  O  |  U  |  X  |   |  G  |  C  |  R  |  F  |  Z  |
 // |  Y  |  I  |  E  |  A  |  ;  |   |  D  |  S  |  T  |  N  |  B  |
-// |  '  |  J  |  ,  |  K  |  .  |   |  W  |  M  |  L  |  P  |  V  |
+// |  '  |  ,  |  J  |  K  |  .  |   |  W  |  M  |  L  |  P  |  V  |
 //             | TAB | ENT |     |   |     | BSPC| SPC |
                         bindings = <
    &kp Q       &kp H      &kp O        &kp U        &kp X          &kp G &kp C          &kp R         &kp F      &kp Z
    &hm LCTRL Y &hm LGUI I &hm LALT E   &hm LSHFT A  &kp SEMI       &kp D &hm LSHFT S    &hm LALT T    &hm LGUI N &hm LCTRL B
-   &kp APOS    &kp J      &kp COMMA    &kp K        &kp DOT        &kp W &kp M          &kp L         &kp P      &kp V
+   &kp APOS    &kp COMMA  &kp J        &kp K        &kp DOT        &kp W &kp M          &kp L         &kp P      &kp V
                           &lt NAVI TAB &lt NUMP RET &none          &none &lt NAVI SPACE &lt NUMP BSPC
                         >;
                 };
