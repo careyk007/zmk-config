@@ -51,12 +51,12 @@
 // |  '  |  Q  |  J  |  K  |  X  |   |  B  |  M  |  W  |  V  |  Z  |
 //             |     | TAB | ENT |   | BSPC| SPC |     |
                         bindings = <
-   &none       &none      &none      &none        &none          &none          &none          &none      &none      &none
-   &kp SEMI    &kp COMMA  &kp DOT    &kp P        &kp Y          &kp F          &kp G          &kp C      &kp R      &kp L
-   &hm LCTRL A &hm LGUI O &hm LALT E &hm LSHFT U  &kp I          &kp D          &hm LSHFT H    &hm LALT T &hm LGUI N &hm LCTRL S
-   &kp APOS    &kp Q      &kp J      &kp K        &kp X          &kp B          &kp M          &kp W      &kp V      &kp Z
-   &none       &none      &none      &lt NAVI TAB &lt NUMP RET   &lt NAVI SPACE &lt NUMP BSPC  &none      &none      &none
-                        >;
+        &none       &none      &none      &none        &none         &none          &none          &none      &none      &none
+        &kp Q       &kp H      &kp O      &kp U        &kp X         &kp G          &kp C          &kp R      &kp F      &kp Z
+        &hm LCTRL Y &hm LGUI I &hm LALT E &hm LSHFT A  &kp SEMI      &kp D          &hm LSHFT S    &hm LALT T &hm LGUI N &hm LCTRL B
+        &kp APOS    &kp COMMA  &kp J      &kp K        &kp DOT       &none &kp W    &kp M          &kp L      &kp P      &kp V
+        &none       &none      &none      &lt NAVI TAB &lt NUMP RET  &lt NAVI SPACE &lt NUMP BSPC  &none      &none      &none
+                            >;
                 };
 
                 game_layer {
