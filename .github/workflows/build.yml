@@ -94,7 +94,7 @@ jobs:
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
         id: west-build-orthryn-left
         with:
-          args: 'build "-s zmk/app -b nrfmicro_13 -- -DSHIELD=orthryn_left -DZMK_CONFIG=/github/workspace/config"'
+          args: 'build "--pristine -s zmk/app -b nrfmicro_13 -- -DSHIELD=orthryn_left -DZMK_CONFIG=/github/workspace/config"'
       - name: Orthryn DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nrfmicro_13.dts.pre.tmp
