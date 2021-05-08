@@ -106,7 +106,7 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: orthryn_left_nice_nano.uf2
+          path: orthryn_left_nrfmicro.uf2
       - name: West Build (Orthryn Right)
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
         id: west-build-orthryn-right
@@ -120,4 +120,4 @@ jobs:
         uses: actions/upload-artifact@v2
         with:
           name: firmware
-          path: orthryn_right_nice_nano.uf2
+          path: orthryn_right_nrfmicro.uf2
