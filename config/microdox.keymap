@@ -68,7 +68,7 @@
    &kp Q       &kp H      &kp O        &kp U        &kp X          &kp G          &kp C         &kp R         &kp F      &kp Z
    &hm LCTRL Y &hm LGUI I &hm LALT E   &hm LSHFT A  &kp SEMI       &kp D          &hm LSHFT S   &hm LALT T    &hm LGUI N &hm LCTRL B
    &kp APOS    &kp COMMA  &kp J        &kp K        &kp DOT        &kp W          &kp M         &kp L         &kp P      &kp V
-                          &none        &lt NAVI TAB &lt NUMP RET   &lt NUMP SPACE &lt NAVI BSPC &none
+                          &none        &lt NAVI TAB &lt NUMP RET   &lt NAVI SPACE &lt NUMP BSPC &none
                         >;
                 };
 
