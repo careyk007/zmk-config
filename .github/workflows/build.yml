@@ -80,7 +80,7 @@ jobs:
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
         id: west-build-skeletyl-left
         with:
-          args: 'build "-s zmk/app -b nrfmicro_13 -- -DSHIELD=skeletyl_left -DZMK_CONFIG=/github/workspace/config"'
+          args: 'build "-s zmk/app --pristine -b nrfmicro_13 -- -DSHIELD=skeletyl_left -DZMK_CONFIG=/github/workspace/config"'
       - name: Skeletyl DTS File
         if: ${{ always() }}
         run: cat -n build/zephyr/nrfmicro_13.dts.pre.tmp
@@ -97,7 +97,7 @@ jobs:
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
         id: west-build-skeletyl-right
         with:
-          args: 'build "--pristine -s zmk/app -b nrfmicro_13 -- -DSHIELD=skeletyl_right -DZMK_CONFIG=/github/workspace/config"'
+          args: 'build "--pristine -s zmk/app --pristine -b nrfmicro_13 -- -DSHIELD=skeletyl_right -DZMK_CONFIG=/github/workspace/config"'
       - name: Skeletyl Right Kconfig file
         run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
       - name: Rename zmk.uf2
