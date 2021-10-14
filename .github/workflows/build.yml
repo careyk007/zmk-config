@@ -76,6 +76,20 @@ jobs:
         with:
           name: firmware
           path: microdox_right_nice_nano.uf2
+      - name: West Build (reviung41)
+        uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
+        id: west-build-reviung41
+        with:
+          args: 'build "--pristine -s zmk/app -b nrfmicro_13 -- -DSHIELD=reviung41 -DZMK_CONFIG=/github/workspace/config"'
+      - name: reviung41 Kconfig file
+        run: cat build/zephyr/.config | grep -v "^#" | grep -v "^$"
+      - name: Rename zmk.uf2
+        run: cp build/zephyr/zmk.uf2 reviung41_nrfmicro_13.uf2
+      - name: Archive (reviung41)
+        uses: actions/upload-artifact@v2
+        with:
+          name: firmware
+          path: reviung41_nrfmicro_13.uf2
       - name: West Build (xd75)
         uses: 'docker://zmkfirmware/zephyr-west-action-arm:latest'
         id: west-build-xd75
