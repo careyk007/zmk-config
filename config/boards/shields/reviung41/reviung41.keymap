@@ -16,9 +16,9 @@
 #define SYM1     4 /* (SYMBOL LAYER 1) */
 #define SYM2     5 /* (SYMBOL LAYER 2) */
 
-// &lt {
-        // flavor = "hold-preferred";
-// };
+&lt {
+        flavor = "hold-preferred";
+};
 
 / {
         behaviors {
