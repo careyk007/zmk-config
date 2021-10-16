@@ -31,20 +31,21 @@
                 bindings = <&kp>, <&kp>;
                 };
         };
+
         keymap {
                 compatible = "zmk,keymap";
 
                 beakl_15_inspired {
 // -----------------------------------------------------------------------------------------
-// |     |  Q  |  H  |  O  |  U  |  X  |     |  G  |  C  |  R  |  F  |  Z  |     |
+// | ESC |  Q  |  H  |  O  |  U  |  X  |     |  G  |  C  |  R  |  F  |  Z  | BSPC|
 // |     |  Y  |  I  |  E  |  A  |  ;  |     |  D  |  S  |  T  |  N  |  B  |     |
 // |     |  '  |  ,  |  J  |  K  |  .  |     |  W  |  M  |  L  |  P  |  V  |     |
 //                         | TAB | ENT |     | SPC | BSPC|
                         bindings = <
-   &trans &kp Q       &kp H      &kp O        &kp U        &kp X                &kp G          &kp C         &kp R         &kp F      &kp Z       &trans
-   &trans &hm LCTRL Y &hm LGUI I &hm LALT E   &hm LSHFT A  &kp SEMI             &kp D          &hm LSHFT S   &hm LALT T    &hm LGUI N &hm LCTRL B &trans
-   &trans &kp APOS    &kp COMMA  &kp J        &kp K        &kp DOT              &kp W          &kp M         &kp L         &kp P      &kp V       &trans
-                                              &lt NAVI TAB &lt NUMP RET  &none  &lt NAVI SPACE &lt NUMP BSPC &none
+   &kp ESC &kp Q       &kp H      &kp O        &kp U        &kp X                &kp G          &kp C         &kp R         &kp F      &kp Z       &kp BSPC
+   &none   &hm LCTRL Y &hm LGUI I &hm LALT E   &hm LSHFT A  &kp SEMI             &kp D          &hm LSHFT S   &hm LALT T    &hm LGUI N &hm LCTRL B &none
+   &none   &kp APOS    &kp COMMA  &kp J        &kp K        &kp DOT              &kp W          &kp M         &kp L         &kp P      &kp V       &none
+                                               &lt NAVI TAB &lt NUMP RET  &none  &lt NAVI SPACE &lt NUMP BSPC &none
                         >;
                 };
 
@@ -92,15 +93,15 @@
 
                 adjust_layer {
 // -----------------------------------------------------------------------------------------
-// | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |   |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
-// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI+ |    |         |   |       |     |     |     |     |        |
-// |          |          |          |          |    |         |   | RESET |     |     |     |     |        |
-//                                              |     |     |     |     |     |
+// | RGB BRI+ | RGB SAT+ | RGB HUE+ | RGB ANI+ |    | RGB TOG |     |  BT1  | BT2 | BT3 | BT4 | BT5 | BT CLR |
+// | RGB BRI- | RGB SAT- | RGB HUE- | RGB ANI+ |    |         |     |       |     |     |     |     |        |
+// |          |          |          |          |    |         |     | RESET |     |     |     |     |        |
+//                                             |    |         |     |       |     |
                         bindings = <
-   &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none &rgb_ug RGB_TOG    &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
-   &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none &none              &none        &none        &none        &none        &none        &none
-   &none           &none           &none           &none           &none &none              &reset       &none        &none        &none        &none        &none
-                                                             &trans      &trans       &tog 3        &trans      &trans
+   &rgb_ug RGB_BRI &rgb_ug RGB_SAI &rgb_ug RGB_HUI &rgb_ug RGB_EFF &none   &rgb_ug RGB_TOG           &bt BT_SEL 0 &bt BT_SEL 1 &bt BT_SEL 2 &bt BT_SEL 3 &bt BT_SEL 4 &bt BT_CLR
+   &rgb_ug RGB_BRD &rgb_ug RGB_SAD &rgb_ug RGB_HUD &rgb_ug RGB_EFR &none   &none                     &none        &none        &none        &none        &none        &none
+   &none           &none           &none           &none           &none   &none                     &reset       &none        &none        &none        &none        &none
+                                                                   &trans  &trans           &tog 3   &trans       &trans
                         >;
                 };
         };
